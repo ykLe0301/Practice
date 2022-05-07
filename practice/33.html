@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cal( num1, num2 ){
+            return [num1 + num2, num1 - num2, num1 * num2, num1 / num2];
+        } // 四则运算
+
+        function compare1( num1, num2) {
+            return num1 > num2 ? num1 : num2;
+        } // 两数相比
+
+        function compare2( num1, num2, num3) {
+            var max = num1 > num2 ? num1 : num2;
+            return max > num3 ? max : num3;
+        } // 三数相比
+
+        function judge(num1) {
+            for (var i=2; i <num1; i++) {
+                if (num1 % 1==0){
+                    return false;
+                }
+            }
+            return true;
+        } // 素数判断
+
+        console.log(cal(2,1));
+        console.log(compare1(2,1));
+        console.log(compare2(2,3,4));
+        console.log(judge(12));
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

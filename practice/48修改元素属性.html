@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="1">1</button>
+    <button id="2">2</button>
+    <img src="../img/random.jpg" alt="">
+
+    <script>
+        var b1 = document.getElementById('1');
+        var b2 = document.getElementById('2');
+        var img = document.querySelector('img');
+
+        b2.onclick = function() {
+            img.src = '../img/fill.jpg';
+        }
+
+        b1.onclick = function () {
+            img.src = '../img/random.jpg';
+        }
+    </script>
+    
+</body>
+</html>

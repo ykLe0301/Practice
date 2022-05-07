@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = '好好学习,学无止境';
+        console.log(str.indexOf('学'));
+        console.log(str.indexOf('学' ,3)); // 跳过第三个'学'
+
+        // 求某个字符出现的次数以及位置
+
+        var str1 = 'dflkjdfhdfnsdiofasfidaodsfnaod';
+        var index = str1.indexOf('d');
+        var num = 0;
+        while (index !== -1) {
+            console.log(index);
+            num++;
+            index = str1.indexOf('d', index +1);
+
+        }
+
+        console.log('d出现的次数是:' + num);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
