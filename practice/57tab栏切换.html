@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    div{
+        margin: 100px 100px;
+    }
+    li{
+        list-style-type: none;
+    }
+    #top{
+        width: 500px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: #f2f2f2;
+    }
+    #top li{
+        width: 100px;
+        float: left;
+    }
+    #top li.current{
+        background: lightcoral;
+    }
+    #bottom{
+        width: 500px;
+        height: 140px;
+        background: lightcoral;
+        position: relative;
+    }
+    #bottom li{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding-left: 15px;
+        box-sizing: border-box;
+        display: none;
+    }
+    #bottom li.current{
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="top">
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul id="bottom">
+            <li class="current">test1</li>
+            <li>test2</li>
+            <li>test3</li>
+            <li>test4</li>
+            <li>test5</li>
+        </ul>
+    </div>
+    
+<script>
+
+    var navList=document.getElementById('top').getElementsByTagName('li');
+    var contents=document.getElementById('bottom').getElementsByTagName('li');
+    for(var i=0; i<navList.length; i++){
+        
+        navList[i].setAttribute("index",i);
+        navList[i].onclick=function(){
+            for(var j=0;j<navList.length;j++){
+          
+                navList[j].removeAttribute('class');
+            }
+            this.className="current";
+          
+            var num=this.getAttribute("index");
+            for(var k=0;k<contents.length;k++){
+                contents[k].removeAttribute('class');
+            }
+            contents[num].className="current";
+        }
+    }
+    
+</script>
+</body>
+</html>
